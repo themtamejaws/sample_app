@@ -1,11 +1,28 @@
-<div class="center hero-unit">
-  <h1>Hunter Research Lab</h1>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+    <section>
+    <%= render 'shared/user_info' %>
+    </section>
+    <section>
+    <%= render 'shared/micropost_form' %>
+    </section>
+    </aside>
+    <div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Hunter Research Lab</h1>
 
-  <h2>
-    Biogenesis, Organisation and Function of Membranes <br> @ <a href="http://www.sheffield.ac.uk">The University of Sheffield</a>
-  </h2>
+    <h2>
+      Biogenesis, Organisation and Function of Membranes <br> @ <a href="http://www.sheffield.ac.uk">The University of Sheffield</a>
+    </h2>
 
-  <%= link_to "Join!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
+    <%= link_to "Join!", signup_path, class: "btn btn-large btn-primary" %>
+  </div>
 
-<%= link_to image_tag("cover.jpg", alt: "Model of a photosynthetic vesicle", size: "200x80"), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+  <%= link_to image_tag("cover.jpg", alt: "Model of a photosynthetic vesicle", size: "200x80"), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+<% end %>
