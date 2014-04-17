@@ -36,6 +36,10 @@ textarea {
   }
 }
 
+.carousel-inner > .item > img {
+        margin: 0 auto;
+    }
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -205,4 +209,5 @@ input {
                         height: 100px;
                         margin-bottom: 5px;
                                     }
+
 }
