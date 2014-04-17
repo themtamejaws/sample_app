@@ -19,9 +19,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    users = User.all.to_a
     if @user.save
+      @user.reload
+      users.each do |followed|
+        @user.follow!(followed)
+        followed.follow!(@user)
+      end
       sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to the Hunter Lab!"
       redirect_to @user
     else
       render 'new'

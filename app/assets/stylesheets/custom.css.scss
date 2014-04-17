@@ -93,7 +93,7 @@ footer {
         color: $gray;
         &:hover {
             color: $grayDarker;
-       }
+   }
   }
   small {
       float: left;
@@ -113,7 +113,7 @@ footer {
       width: 100%;
       margin-top: 45px;
       @include box_sizing;
-    }
+}
 }
 
 /* sidebar */
@@ -140,19 +140,13 @@ h1 {
 }
   }
 }
+                                                                                                 /* forms */
 
-.gravatar {
-    float: left;
-    margin-right: 10px;
-}
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-    border: 1px solid #bbb;
-    width: 100%;
-    margin-bottom: 15px;
-    @include box_sizing;
+                                                                                                  input, textarea, select, .uneditable-input {
+                                                                                                      border: 1px solid #bbb;
+                                                                                                      width: 100%;
+                                                                                                      margin-bottom: 15px;
+                                                                                                      @include box_sizing;
 }
 
 input {
@@ -195,21 +189,21 @@ input {
     li {
         padding: 10px 0;
         border-top: 1px solid #e8e8e8;
-                }
             }
-            .content {
-                display: block;
-              }
-              .timestamp {
-                  color: $grayLight;
+        }
+        .content {
+            display: block;
+          }
+          .timestamp {
+              color: $grayLight;
+            }
+            .gravatar {
+                float: left;
+                margin-right: 10px;
                 }
-                .gravatar {
-                    float: left;
-                    margin-right: 10px;
-                    }
-                    aside {
-                        textarea {
-                            height: 100px;
-                            margin-bottom: 5px;
-                                        }
+                aside {
+                    textarea {
+                        height: 100px;
+                        margin-bottom: 5px;
+                                    }
 }
