@@ -24,23 +24,47 @@
     <%= link_to "Join!", signup_path, class: "btn btn-large btn-primary" %>
   </div>
 
-<div class="center">
-  <div id="myCarousel" class="carousel slide">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <!-- Carousel items -->
-    <div class="carousel-inner">
-      <div class="active item"> <%= link_to image_tag("nanoarray.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200"), 'http://www.shef.ac.uk/mbb/staff/hunter' %> </div>
-      <div class="item">  <%= link_to image_tag("PS1-LH1.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200"), 'http://www.shef.ac.uk/mbb/staff/hunter' %> </div>
-      <div class="item"> <%= link_to image_tag("mg-chelatase.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200"), 'http://www.shef.ac.uk/mbb/staff/hunter' %> </div>
-      <div class="item"> <%= link_to image_tag("Rsp.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200"), 'http://www.shef.ac.uk/mbb/staff/hunter' %> </div>                                                                                       </div>
+  <div class="center">
+    <div id="myCarousel" class="carousel slide">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="active item"> 
+          <%= link_to image_tag("nanoarray.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200"), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+          <div class="carousel-caption">
+            <h4>First label</h4>
+            <p>A working Bootstrap carousel example.</p>
+          </div>
+        </div>
+        <div class="item">  
+          <%= link_to image_tag("PS1-LH1.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200"), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+          <div class="carousel-caption">
+            <h4>First label</h4>
+            <p>A working Bootstrap carousel example.</p>
+          </div>
+        </div>
+        <div class="item"> 
+          <%= link_to image_tag("mg-chelatase.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200"), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+          <div class="carousel-caption">
+            <h4>First label</h4>
+            <p>A working Bootstrap carousel example.</p>
+          </div>
+        </div>
+        <div class="item"> 
+          <%= link_to image_tag("Rsp.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200"), 'http://www.shef.ac.uk/mbb/staff/hunter' %> 
+          <div class="carousel-caption">
+            <h4>First label</h4>
+            <p>A working Bootstrap carousel example.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
   </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-  </div>
-</div>
 <% end %>
