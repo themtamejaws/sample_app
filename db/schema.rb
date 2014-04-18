@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418115136) do
+ActiveRecord::Schema.define(version: 20140418124127) do
+
+  create_table "bookings", force: true do |t|
+    t.date    "day",     null: false
+    t.integer "time",    null: false
+    t.integer "user_id", null: false
+  end
+
+  add_index "bookings", ["day", "time"], name: "index_bookings_on_day_and_time", unique: true
 
   create_table "microposts", force: true do |t|
     t.string   "content"

@@ -1,0 +1,38 @@
+.row
+  .span12
+    %h3
+      Schedule
+
+.row
+  .span12
+    %table.table.table-striped
+      %thead
+        %th
+          - @days.each do |day|
+            %th
+              .text-center
+                = Date::DAYNAMES[day.wday]
+      %tbody
+        - Booking::AVAILABLE_TIMES.each do |time|
+          %tr
+            %td
+              #{time}:00
+            - @days.each do |day|
+              - booking = Booking.find_by_day_and_time(day, time)
+              %td
+                .text-center
+                  - if booking
+                    - if booking.user == current_user
+                      = form_tag({:controller => 'schedule', :action => 'destroy'}, :method => :post) do
+                        %input{type: 'hidden', id: 'day', name: 'day', value: day}
+                        %input{type: 'hidden', id: 'time',  name: 'time', value: time}
+                        %button.make-booking.btn.btn-danger
+                          Unschedule
+                    - else
+                      = booking.user.name
+                  - else
+                    = form_tag({:controller => 'schedule', :action => 'create'}, :method => :post) do
+                      %input{type: 'hidden', id: 'day', name: 'day', value: day}
+                      %input{type: 'hidden', id: 'time',  name: 'time', value: time}
+                      %button.make-booking.btn.btn-success
+                        Available
