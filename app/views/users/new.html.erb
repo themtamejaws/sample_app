@@ -18,6 +18,9 @@ i<% provide(:title, 'Sign up') %>
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
+      <%= f.check_box(:public_contact) %>
+      <%= f.label(:public_contact, "I wish my name email to be publicly availible for contact") %>
+
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>

@@ -1,39 +1,139 @@
 <% provide(:title, 'About Us') %>
-<h1>Our Research</h1>
-<p>
-Photosynthesis is essential for life on Earth. It starts with the collection of solar energy by the protein-bound chlorophyll and carotenoid pigments of light-harvesting (LH) complexes, which absorb and transfer this energy to reaction centres (RCs) where it is trapped, before conversion to a form of energy useful for the cell. We exploit the relative simplicity of photosynthetic bacteria to study the biosynthesis of these pigments, and the assembly, structure and membrane organisation of LH and RC pigment-protein complexes. We use a variety of approaches - molecular genetics, protein engineering, atomic force microscopy as well as structural and spectroscopic methods - for our studies of the biogenesis, structure and function of photosynthetic membranes. In addition we are fortunate to have collaborations with many scientists in Sheffield, Europe, the USA and Japan <br> <br>
-<hr>
-<h2 id="biosynth">Chlorophyll biosynthesis in bacteria and plants</h2>
-Chlorophyll (Chl) biosynthesis is the most productive biochemical pathway on Earth, synthesising billions of tonnes of Chl per annum on land and in the oceans. We have cloned and sequenced many of the genes for this biosynthetic pathway, from Rhodobacter sphaeroides, the cyanobacterium Synechocystis, and from the model plant Arabidopsis thaliana and have been successful in overproducing many of them in an active form in E. coli. We study the enzymology and regulation of this pathway; in particular, we are characterising the mechanism of the first committed step of chlorophyll biosynthesis, magnesium chelatase, as well as the enzyme that catalyses the light-driven step in the pathway, protochlorophyllide reductase <br> <br>
 
-<div class="center">
+<div class="row">
+  <h1>Our Research</h1>
+  <p>
+  Photosynthesis is essential for life on Earth. It starts with the collection of solar energy by the protein-bound chlorophyll and carotenoid pigments of light-harvesting (LH) complexes, which absorb and transfer this energy to reaction centres (RCs) where it is trapped, before conversion to a form of energy useful for the cell. We exploit the relative simplicity of photosynthetic bacteria to study the biosynthesis of these pigments, and the assembly, structure and membrane organisation of LH and RC pigment-protein complexes. We use a variety of approaches - molecular genetics, protein engineering, atomic force microscopy as well as structural and spectroscopic methods - for our studies of the biogenesis, structure and function of photosynthetic membranes. In addition we are fortunate to have collaborations with many scientists in Sheffield, Europe, the USA and Japan <br> <br>
+  <hr>
+
+  <h2 id="biosynth">Chlorophyll biosynthesis in bacteria and plants</h2>
+  Chlorophyll (Chl) biosynthesis is the most productive biochemical pathway on Earth, synthesising billions of tonnes of Chl per annum on land and in the oceans. We have cloned and sequenced many of the genes for this biosynthetic pathway, from Rhodobacter sphaeroides, the cyanobacterium Synechocystis, and from the model plant Arabidopsis thaliana and have been successful in overproducing many of them in an active form in E. coli. We study the enzymology and regulation of this pathway; in particular, we are characterising the mechanism of the first committed step of chlorophyll biosynthesis, magnesium chelatase, as well as the enzyme that catalyses the light-driven step in the pathway, protochlorophyllide reductase <br> <br>
+  <!-- Button to trigger modal -->
+  <a href="#myModal" role="button" class="btn center" data-toggle="modal" >Selected Publications</a>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Selected Publications</h3>
+    </div>
+    <div class="modal-body">
+      <p>Davison, PA, Hunter, CN and Horton, P (2002) Overexpression of beta-carotene hydroxylase results in improved tolerance to stress in Arabidopsis. Nature 418, 203-206 <br><br>
+      Heyes, DJ, Ruban, AV, Wilks, H M and Hunter, CN (2002) Enzymology below 200K: the kinetics and thermodynamics of the photochemistry catalysed by protochlorophyllide oxidoreductase PNAS USA 99, 11145-11150. <br><br>
+      Heyes, D.J., Hunter, C.N., van Stokkum, I.H.M. van Grondelle, R. and Groot, M. (2003) Ultrafast enzymatic reaction dynamics in protochlorophyllide oxidoreductase. Nature Structural Biology 10, 491-492.<br><br>
+      Reid, J.D. and Hunter, C.N. (2004) Magnesium dependent ATPase activity and cooperativity of magnesium chelatase from Synechocystis sp. PCC6803. J. Biol. Chem. 279, 26893-26899.<br><br>
+      Shepherd, M. and Hunter, CN (2004) Transient kinetics of the reaction catalyzed by magnesium protoporphyrin IX methyltransferase. Biochem. J. 382, 1009–1013<br><br>
+      Davison, P.A., Schubert, H.L., Reid, J.D., Iorg, C.D., Heroux, A., Hill, C.P. and Hunter, C.N. (2005) Structural and biochemical characterization of Gun4 suggests a mechanism for its role in chlorophyll biosynthesis. Biochemistry 44, 7603-7612.<br><br>
+      Heyes, D.J, Heathcote, P., Rigby, S.E.J., Palacios, M.A., van Grondelle, R., and Hunter, C.N. (2006) The first catalytic step of the light-driven enzyme protochlorophyllide oxidoreductase proceeds via a charge transfer complex. J. Biol. Chem. 281, 26847-26853.<br><br>
+      Viney, J., Davison, P.A., Hunter, C.N. and Reid, J.D. (2007) Direct measurement of metal-ion chelation in the active site of the AAA+ ATPase magnesium chelatase. Biochemistry 46, 12788-12794<br><br>
+      Sytina, O.A., Heyes, D.J., Hunter, C.N., Alexandre, MT, van Stokkum, I.H.M., van Grondelle, R. and Groot, M-L. (2008) Conformational changes in an ultrafast light-driven enzyme determine catalytic activity. Nature 456, 1001-1005.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="center">
     <%= link_to image_tag("mg-chelatase.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200" ), 'http://www.shef.ac.uk/mbb/staff/hunter' %>                                      
-</div>                                                                                                                                                                            
-<hr>
-<h2 id="prot_eng">Protein engineering, biochemical and structural studies of light harvesting and reaction centre complexes.</h2>
-We have developed a versatile system for the mutagenesis and expression of genetically altered photosynthetic complexes, which allows us to examine protein-protein and pigment-protein interactions, such as those that establish hydrogen-bonding networks that tune the light-absorbing and energy transferring properties of bacterial light-harvesting (LH) complexes. In our biochemical work we purify the LH2, LH1 and RC-LH1 and RC-LH1-PufX complexes of Rhodobacter sphaeroides and use crystallographic and single particle methods, in collaboration with Professor Per Bullough, to study their internal structure and molecular shape. The V-shape of the RC-LH1-PufX dimer complex is a striking example of a protein that imposes curvature on a cell membrane, which optimises light absorption.
-<br> <br>
+  </div>                                                                                                                                                                            
+  <hr>
+  <h2 id="prot_eng">Protein engineering, biochemical and structural studies of light harvesting and reaction centre complexes.</h2>
+  We have developed a versatile system for the mutagenesis and expression of genetically altered photosynthetic complexes, which allows us to examine protein-protein and pigment-protein interactions, such as those that establish hydrogen-bonding networks that tune the light-absorbing and energy transferring properties of bacterial light-harvesting (LH) complexes. In our biochemical work we purify the LH2, LH1 and RC-LH1 and RC-LH1-PufX complexes of Rhodobacter sphaeroides and use crystallographic and single particle methods, in collaboration with Professor Per Bullough, to study their internal structure and molecular shape. The V-shape of the RC-LH1-PufX dimer complex is a striking example of a protein that imposes curvature on a cell membrane, which optimises light absorption.
+  <br> <br>
+  <!-- Button to trigger modal -->                                                                                                                                            
+  <a href="#myModal2" role="button" class="btn center" data-toggle="modal" >Selected Publications</a>
 
-<div class="center">
-  <%= link_to image_tag("PS1-LH1.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200" ), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
-</div>                                                                                                                                                                               
-<hr>
-<h2 id="membs">Assembly and organisation of bacterial photosynthetic membranes</h2>
-Photosynthetic organisms increase the surface area for light absorption and photochemistry by elaborating internal membranes into lamellar, tubular or spherical structures. Membrane development establishes the architectures that harvest, transduce and store solar energy. We are using a combination of atomic force microscopy and molecular genetics to study the spatial organisation of the bacterial photosynthetic apparatus, and the strategies employed for efficient harvesting and trapping of solar energy by photosynthetic bacteria.
-<br> <br>
+  <!-- Modal -->
+  <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Selected Publications</h3>
+    </div>
+    <div class="modal-body">
+      Jamieson, SJ, Wang, P, Qian, P, Kirkland, J,Y. Conroy, MJ, Hunter, CN and Bullough, PA. (2002) Projection Structure of the photosynthetic reaction centre-antenna complex of Rhodospirillum rubrum at 8.5Å resolution. EMBO J 21: 3927-3935 <br><br>
+      Qian, P., Addlesee, H.A., Ruban, A.V., Wang, P., Bullough, P.A. and Hunter, C.N. (2003) A reaction center – light harvesting 1 complex from a Rhodospirillum rubrum mutant with altered esterifying pigments: characterization by optical spectroscopy and cryo-electron microscopy. J. Biol. Chem. 278, 23678–23685.<br><br>
+      Fotiadis, D., Qian, P., Philippsen, A., Bullough, P.A., Engel, A. and Hunter, C.N. (2004) Structural analysis of the RC-LH1 photosynthetic core complex of Rhodospirillum rubrum using atomic force microscopy. J. Biol. Chem. 279, 2063-2068<br><br>
+      Bahatyrova, S. Frese, R. van der Werf, K.O., Otto, C. Hunter, C.N. and Olsen, J.D. (2004) Flexibility and size heterogeneity of the LH1 light harvesting complex revealed by atomic force microscopy: functional significance for bacterial photosynthesis. J. Biol Chem. 279, 21327–21333.<br><br>
+      Qian, P., Hunter, C.N. and Bullough, P.A. (2005) The 8.5Å projection structure of the core RC-LH1-PufX dimer of Rhodobacter sphaeroides. J.Mol. Biol. 349, 948-960.<br><br>
+      Georgakopoulou, S., van der Zwan, G., Olsen, J.D., Hunter, C.N., Niederman, R.A. and van Grondelle, R. (2006) Investigation of the effects of different carotenoids on the absorption and CD Signals of light harvesting 1 complexes J. Phys. Chem B 110, 3354-3361.<br><br>
+      Rutkauskas, D., Olsen, J.D., Gall, A., Cogdell, R. J., Hunter, C. N., and van Grondelle, R. (2006) Comparative study of spectral flexibilities of bacterial light-harvesting complexes: structural implications. Biophys. J. 90, 2463-2474.<br><br>
+      Rutkauskas, D., Novoderezhkin, V., Gall, A., Olsen, J.D., Cogdell, R. J., Hunter, C. N., and van Grondelle, R. (2006). Spectral trends in the fluorescence of single bacterial light-harvesting complexes: experiments and modified Redfield simulations. Biophys. J. 90, 2475-2485.<br><br>
+      Tunnicliffe, R.B., Ratcliffe, E.C., Hunter, C.N. and Williamson, M.P. (2006) The solution structure of the PufX polypeptide from Rhodobacter sphaeroides. FEBS Letters, 580, 6967-6971<br><br>
+      Qian, P., Bullough, P.A. and Hunter, C.N. (2008) 3-D reconstruction of a membrane-bending complex: the RC-LH1-PufX core dimer of Rhodobacter sphaeroides. J. Biol. Chem. 283, 14002-14011.<br><br>
+      Bullough, P.A., Qian, P. and Hunter, C.N. (2008) Reaction Center-Light-Harvesting Core Complexes of Purple Bacteria. In: The Purple Phototrophic Bacteria (Hunter, C.N., Daldal, F., Thurnauer, M.C. and Beatty, J.T., eds.) pp 155-179, Springer, Dordrecht, the Netherlands.<br><br>
+    Sener, M.K., Hsin, J., Trabuco, L.G., Villa, E., Qian, P, Hunter, C.N. and Schulten, K. (2009) Structural model and excitonic properties of the dimeric RC-LH1-PufX complex from Rhodobacter sphaeroides. Chemical Physics 357, 188-197.</div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+  </div>
+  <br>
+  <br><div class="center">
+    <%= link_to image_tag("PS1-LH1.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200" ), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+  </div>                                                                                                                                                                               
+  <hr>
+  <h2 id="membs">Assembly and organisation of bacterial photosynthetic membranes</h2>
+  Photosynthetic organisms increase the surface area for light absorption and photochemistry by elaborating internal membranes into lamellar, tubular or spherical structures. Membrane development establishes the architectures that harvest, transduce and store solar energy. We are using a combination of atomic force microscopy and molecular genetics to study the spatial organisation of the bacterial photosynthetic apparatus, and the strategies employed for efficient harvesting and trapping of solar energy by photosynthetic bacteria.
+  <br> <br>
+  <!-- Button to trigger modal -->                                                                                                                                            
+  <a href="#myModal3" role="button" class="btn center" data-toggle="modal" >Selected Publications</a>
 
-<div class="center">
-<%= link_to image_tag("Rsp.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200" ), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+  <!-- Modal -->
+  <div id="myModal3" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Selected Publications</h3>
+    </div>
+    <div class="modal-body">
+      Siebert, C.A., Qian, P., Fotiadis, D., Engel, A., Hunter, C.N. and Bullough, P. (2004). The role of PufX in the molecular architecture of photosynthetic membranes in Rhodobacter sphaeroides. EMBO. J 23, 690-700.<br><br> 
+      Bahatyrova, S., Frese, R.N., Siebert, C.A., Olsen, J.D., van der Werf, K.O., van Grondelle, R., Niederman, R.A., Bullough, P.A., Otto, C. and Hunter, C.N. (2004) The native architecture of a photosynthetic membrane. Nature 430, 1058-1061<br> <br> 
+      Frese, R.N, Siebert, C.A., Niederman, R.A., Hunter, C.N., Otto, C and van Grondelle, R. (2004) The long-range organization of a native photosynthetic membrane. Proc. Natl. Acad. Sci USA, 101, 17994-17999.<br> <br> 
+      Koblízek, M., Shih, J.D., Breitbart, S.I., Ratcliffe, E.C., Kolber, Z.S., Hunter, C.N. and Niederman, R.A. (2005) Sequential assembly of photosynthetic units in Rhodobacter sphaeroides as revealed by fast repetition rate analysis of variable bacteriochlorophyll a fluorescence. Biochim. Biophys. Acta 1706, 220– 231<br> <br> 
+      Hunter, C.N., Tucker, J.D. and Niederman, R.A. (2005) Perspective on the assembly and organisation of photosynthetic membranes in Rhodobacter sphaeroides. Photochemical & Photobiological Sciences 4, 1023-1027.<br> <br> 
+      Sener, M.K., Olsen, J.D., Hunter, C.N. and Schulten, K. Atomic level structural and functional model of a bacterial photosynthetic membrane vesicle (2007) Proc. Natl. Acad. Sci. USA 104, 15273-15278.<br> <br> 
+      Frese, R.N., Pàmies, J.C., Olsen, J.D., Bahatyrova, S., van der Weij-de Wit, C.D., Aartsma, T.J., Otto, C., Hunter, C.N., Frenkel, D., and van Grondelle, R. (2008) Protein shape and crowding drive domain formation and curvature in biological membranes. Biophys. J. 19, 640-647.<br> <br> 
+    Olsen, J.D., Tucker, J.D., Timney, J.A., Qian, P., Vasilev, C. and Hunter, C.N. (2008) The organization of LH2 complexes in membranes from Rhodobacter sphaeroides. J. Biol. Chem. 283, 30772-30779.</div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="center">
+    <%= link_to image_tag("Rsp.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200" ), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+  </div>
+
+  <hr>
+  <h2 id="nano">Bionanotechnology of light harvesting complexes.</h2>
+  Atomic-level structural models of whole membrane assemblies have now been constructed by Klaus Schulten and Melih Sener at the Beckman Institute, Illinois, USA, using a combination of crystallographic, AFM and electron microscopy data allied to computational modeling. Such models are starting to address the collective behaviour of whole membrane assemblies, to make predictions of the energy transfer and trapping behaviour of large-scale arrays, and to identify desirable design motifs for artificial photosynthetic systems. New surface chemistries and nanopatterning methods are being developed in collaboration with Professor Graham Leggett (Sheffield) and Dr Cees Otto (University of Twente, the Netherlands) to facilitate the construction of innovative architectures for coupled energy transfer and trapping. Nanometre-scale patterns of photosynthetic complexes have been fabricated on self-assembled monolayers deposited on either gold or glass using several lithographic methods. Such artificial light-harvesting arrays will advance our understanding of natural energy-converting systems, and could guide the design and production of proof-of-principle devices for biomimetic systems to capture, convert and store solar energy
+
+  <br><br>
+  <!-- Button to trigger modal -->                                                                                                                                            
+  <a href="#myModal4" role="button" class="btn center" data-toggle="modal" >Selected Publications</a>
+
+  <!-- Modal -->
+  <div id="myModal4" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Selected Publications</h3>
+    </div>
+    <div class="modal-body">
+      Kassies, R., van der Werf, K.O., Lenferink, A., Hunter, C.N., Olsen, J.D., Subramaniam, V. and Otto, C. (2005) Combined AFM and confocal fluorescence microscope for applications in bio-nanotechnology. J. Microscopy. 217, 109-116.<br><br>
+      Reynolds, N., Janusz, S., Escalante-Marun, M., Timney, J., Ducker, R.E., Olsen, J.D., Otto, C., Subramaniam, V., Leggett, G.J. and Hunter, C.N. (2007) Directed formation of micro- and nanoscale patterns of functional light harvesting LH2 complexes J. Am. Chem. Soc. 129, 14625-14631.<br><br>
+      Escalante, M., Maury, P., Bruinink, C., van der Werf, K., Olsen, J.D., Timney, J.A., Hunter, C.N., Huskens, J., Subramaniam, V. and Otto, C. (2008) Directed assembly of functional light harvesting antenna complexes onto chemically patterned surfaces. Nanotechnology 19, 25101 (6pp).<br><br>
+      Escalante, M., Ludden, M.J.W., Zhao, Y., Vermeij, R., Olsen, J.D., Jansen, H.V., Hunter, C.N., Huskens, J. Subramaniam, V. and Otto, C. (2008) Nanometer arrays of functional light harvesting antenna complexes by nanoimprint lithography and host-guest interactions, J. Am. Chem. Soc. 130, 8892-8893.<br><br>
+      Reynolds, N., Tucker, J.D., Davison, P.A., Timney, J.A., Hunter, C.N. and Leggett, G.J. (2009) Site-specific immobilization and micrometer and nanometer scale photopatterning of yellow fluorescent protein on glass surfaces. J. Am. Chem. Soc. 131, 896-897.
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="center">
+    <%= link_to image_tag("nanoarray.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200" ), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
+  </div>
+
+  </p>
 </div>
-
-<hr>
-<h2 id="nano">Bionanotechnology of light harvesting complexes.</h2>
-Atomic-level structural models of whole membrane assemblies have now been constructed by Klaus Schulten and Melih Sener at the Beckman Institute, Illinois, USA, using a combination of crystallographic, AFM and electron microscopy data allied to computational modeling. Such models are starting to address the collective behaviour of whole membrane assemblies, to make predictions of the energy transfer and trapping behaviour of large-scale arrays, and to identify desirable design motifs for artificial photosynthetic systems. New surface chemistries and nanopatterning methods are being developed in collaboration with Professor Graham Leggett (Sheffield) and Dr Cees Otto (University of Twente, the Netherlands) to facilitate the construction of innovative architectures for coupled energy transfer and trapping. Nanometre-scale patterns of photosynthetic complexes have been fabricated on self-assembled monolayers deposited on either gold or glass using several lithographic methods. Such artificial light-harvesting arrays will advance our understanding of natural energy-converting systems, and could guide the design and production of proof-of-principle devices for biomimetic systems to capture, convert and store solar energy.
-
-
-<div class="center">
-  <%= link_to image_tag("nanoarray.jpg", alt: "Model of a photosynthetic vesicle", size: "600x200" ), 'http://www.shef.ac.uk/mbb/staff/hunter' %>
-</div>
-
-</p>
 </html>

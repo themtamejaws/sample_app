@@ -12,3 +12,21 @@ Sheffield S10 2TN, United Kingdom.<br>
 <p align="center">Sheffield 222 4191 <br>
 C.N.Hunter@sheffield.ac.uk
 </p>
+<hr>
+
+<div class="users">
+  <% @public_users.each do |user| %>                                                             
+    <div class="row">
+      <div class="span1">
+        <%= gravatar_for user %>
+      </div>
+      <div class="span5">
+        <%= user.name %>
+        <br>
+        <%= user.email %> 
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>
+

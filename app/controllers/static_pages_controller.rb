@@ -13,5 +13,6 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    @public_users = User.where(public_contact: true )
   end
 end
