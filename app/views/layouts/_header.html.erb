@@ -13,9 +13,10 @@
         </a>
         <ul class="dropdown-menu">
           <li><%= link_to "Equipment Booking" %></li>
-          <li><%= link_to "PCR", edit_user_path(current_user) %></li>
-          <li><%= link_to "HPLC", edit_user_path(current_user) %></li>
-          <li><%= link_to "Shakers", edit_user_path(current_user) %></li>
+          <li><%= link_to "PCR1", equipment_schedule_path('PCR1') %></li>
+          <li><%= link_to "PCR2", equipment_schedule_path('PCR2') %></li>
+          <li><%= link_to "HPLC", equipment_schedule_path('HPLC') %></li>
+          <li><%= link_to "Shakers", equipment_schedule_path('Shakers') %></li>
           <li class="divider"></li>
           <li><%= link_to "Chemical Ordering", edit_user_path(current_user) %></li>
           <li>

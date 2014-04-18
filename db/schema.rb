@@ -14,12 +14,13 @@
 ActiveRecord::Schema.define(version: 20140418124127) do
 
   create_table "bookings", force: true do |t|
-    t.date    "day",     null: false
-    t.integer "time",    null: false
-    t.integer "user_id", null: false
+    t.date    "day",       null: false
+    t.integer "time",      null: false
+    t.integer "user_id",   null: false
+    t.string  "equipment", null: false
   end
 
-  add_index "bookings", ["day", "time"], name: "index_bookings_on_day_and_time", unique: true
+  add_index "bookings", ["day", "time", "equipment"], name: "index_bookings_on_day_and_time_and_equipment", unique: true
 
   create_table "microposts", force: true do |t|
     t.string   "content"
