@@ -20,10 +20,15 @@ C.N.Hunter@sheffield.ac.uk
       <div class="span1">
         <%= gravatar_for user %>
       </div>
-      <div class="span5">
+      <div class="span3">
         <%= user.name %>
         <br>
         <%= user.email %> 
+        <br>
+        <%= user.research_title %>
+      </div>
+      <div class="span8">
+        <%= user.research_description %>
       </div>
     </div>
     <hr>
