@@ -1,13 +1,12 @@
 <footer class="footer">
-  <small>
-    Written using <a href="http://railstutorial.org/">Rails Tutorial</a>
-    by Michael Hartl
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "Help",   help_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-      <li><a href="http://news.railstutorial.org/">News</a></li>
-    </ul>
-  </nav>
+
+<nav>
+<%= link_to image_tag("bbsrc.png", alt: "BBSRC logo", size: "150x50"), 'http://www.bbsrc.ac.uk/home/home.aspx' %>
+<%= link_to image_tag("usd_energy.png", alt: "USDE logo", size: "150x50"), 'http://science.energy.gov' %> 
+<ul>
+  <li><%= link_to "Help",   help_path %></li>
+  <li><%= link_to "Contact", contact_path %></li>
+  <li><a href="http://news.railstutorial.org/">News</a></li>
+</ul>
+</nav>
 </footer>
