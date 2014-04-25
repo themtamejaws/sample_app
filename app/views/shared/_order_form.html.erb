@@ -1,0 +1,11 @@
+<%= form_for(@order) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>                                                                                                                      
+  <div class="field">
+    <%= f.text_field :order_name, placeholder: "Order/Chemical Name" %>
+    <%= f.text_field :order_number, placeholder: "Catalogue Number" %>
+    <%= f.text_field :order_size, placeholder: "Size (mass, volume etc..)" %>
+    <%= f.text_field :order_price, placeholder: "Price" %>
+    <%= f.text_area :notes, placeholder: "Notes..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

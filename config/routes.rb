@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  get "labs/new"
   resources :users do
     member do
       get :following, :followers
@@ -7,6 +8,7 @@ SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :orders, only: [:create, :destroy]                                                                                                                          
 
   root 'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
@@ -15,6 +17,7 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/orders',  to: 'orders#view',          via: 'get'
 
   get 'schedule/:equipment' => 'schedule#view', as: :equipment_schedule
   post 'schedule/:equipment/book' => 'schedule#create'
