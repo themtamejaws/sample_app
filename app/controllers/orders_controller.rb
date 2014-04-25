@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
     @order = current_user.orders.build(order_params)
     if @order.save
       flash[:success] = "Order created!"
-      render 'orders/view'
+      redirect_to root_url
     else
       @order_feed_items = []
       render 'orders/view'
