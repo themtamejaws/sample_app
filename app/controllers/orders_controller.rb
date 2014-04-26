@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
     @order = current_user.orders.build(order_params)
     if @order.save
       flash[:success] = "Order created!"
-      redirect_to root_url
+      redirect_to action: 'view'
     else
       @order_feed_items = []
       render 'orders/view'
@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
 
   def destroy
     @order.destroy
-    redirect_to root_url
+    redirect_to action: 'view'
   end
 
   def view
