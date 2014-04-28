@@ -1,0 +1,11 @@
+<li>                                                                                                                                                              
+<span class="content"><%= order.order_name %></span>
+<span class="timestamp">
+  Posted <%= time_ago_in_words(order.created_at) %> ago.
+</span>
+<% if current_user?(order.user) %>  
+  <%= link_to "delete", order, method: :delete,
+    data: { confirm: "You sure?" },
+    title: order.order_name %>
+  <% end %>
+  </li>

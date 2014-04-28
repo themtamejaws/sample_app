@@ -8,6 +8,7 @@ class ScheduleController < ApplicationController
 
   def create
     Booking.create!(user: current_user, time: params[:time], day: params[:day], equipment: params[:equipment])
+    current_user.microposts.create( :content => "#{current_user.name} booked #{params[:equipment]} at #{params[:time]}:00 on #{params[:day]}")
     redirect_to(action: 'view')
   end
 
