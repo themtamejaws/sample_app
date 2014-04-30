@@ -1,0 +1,6 @@
+<% if @protocol_feed_items.any? %>
+  <ol class="orders">                                                                                       
+    <%= render partial: 'shared/protocol_feed_item', collection: @protocol_feed_items %>
+  </ol>
+  <%= will_paginate @protocol_feed_items %>
+<% end %>    

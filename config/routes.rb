@@ -9,6 +9,7 @@ SampleApp::Application.routes.draw do
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :orders, only: [:create, :destroy]                                                                                                                          
+  resources :protocols, only: [:create, :destroy]                                                                                                                          
 
   root 'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
@@ -18,6 +19,7 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/orders',  to: 'orders#view',          via: 'get'
+  match '/protocols',  to: 'protocols#view',       via: 'get'
 
   get 'schedule/:equipment' => 'schedule#view', as: :equipment_schedule
   post 'schedule/:equipment/book' => 'schedule#create'

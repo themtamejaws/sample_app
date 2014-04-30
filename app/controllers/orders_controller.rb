@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = current_user.orders.build(order_params)
+    current_user.microposts.create( :content => "#{current_user.name} ordered #{order_params[:order_name]} from #{order_params[:order_supplier]}")
     if @order.save
       flash[:success] = "Order created!"
       redirect_to action: 'view'

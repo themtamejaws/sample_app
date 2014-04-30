@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425121657) do
+ActiveRecord::Schema.define(version: 20140429094733) do
 
   create_table "bookings", force: true do |t|
     t.date    "day",       null: false
@@ -52,9 +52,20 @@ ActiveRecord::Schema.define(version: 20140425121657) do
     t.datetime "updated_at"
     t.string   "order_supplier"
     t.string   "notes"
+    t.boolean  "order_status"
   end
 
   add_index "orders", ["user_id", "created_at"], name: "index_orders_on_user_id_and_created_at"
+
+  create_table "protocols", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "protocols", ["user_id", "created_at"], name: "index_protocols_on_user_id_and_created_at"
 
   create_table "relationships", force: true do |t|
     t.integer  "follower_id"

@@ -1,0 +1,13 @@
+<li id="<%= protocol_feed_item.id %>">
+<%= link_to gravatar_for(protocol_feed_item.user), protocol_feed_item.user %>
+<span class="content"><%= protocol_feed_item.title %></span>                                                                                                                        
+<span class="content"><%= protocol_feed_item.content %></span>                                                                                                                        
+<span class="timestamp">
+  Posted <%= time_ago_in_words(protocol_feed_item.created_at) %> ago.
+</span>
+<% if current_user?(protocol_feed_item.user) || current_user.admin? %>
+  <%= link_to "delete", protocol_feed_item, method: :delete,
+    data: { confirm: "You sure?" },
+    title: protocol_feed_item.title %>
+  <% end %>
+  </li>
