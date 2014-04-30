@@ -1,0 +1,6 @@
+<h1>
+  <%= @protocols.title %> by <%= User.find_by( id: @protocols.user_id).name %>                                                                                                 
+</h1>
+<p>
+<%= simple_format(@protocols.content) %>
+</p>

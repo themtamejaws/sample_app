@@ -36,7 +36,7 @@ class ProtocolsController < ApplicationController
   private
 
   def order_params
-    params.require(:protocol).permit(:title, :content, :user_id)
+    params.require(:protocol).permit(:title, :content, :user_id, :public_contact)
   end
 
   def correct_user

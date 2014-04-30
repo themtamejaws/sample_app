@@ -8,5 +8,7 @@
 <span>
   <%= pluralize(current_user.microposts.count, "micropost") %>
   <br>
-  <%= pluralize(current_user.orders.count, "order") %>
+  <%= pluralize(current_user.orders.count, "order") %> pending
+  <br>
+  <%= pluralize(current_user.protocols.count, "protocol") %>
 </span>

@@ -1,0 +1,19 @@
+<div class="users">
+  <% @public_protocols.each do |protocol| %>
+    <div class="row">
+      <div class="span1">
+        <%= gravatar_for protocol.user %>
+      </div>
+      <div class="span3">
+        <%= protocol.title %>
+        <br>
+        by <%= protocol.user.name %>
+      </div>
+      <div class="span8">                                                                                     
+        <%= simple_format(truncate(protocol.content), :length => 250, :separator => ' ' ) %>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>
+

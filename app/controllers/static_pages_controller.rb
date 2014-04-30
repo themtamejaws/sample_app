@@ -15,4 +15,13 @@ class StaticPagesController < ApplicationController
   def contact
     @public_users = User.where(public_contact: true )
   end
+
+  def protocols_view
+    @public_protocols = Protocol.where(public_contact: true )
+  end
+
+  def protocols_show
+    @protocols =  Protocol.find(params[:id])  
+  end
+
 end

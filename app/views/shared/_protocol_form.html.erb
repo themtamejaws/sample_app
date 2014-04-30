@@ -3,6 +3,9 @@
   <div class="field">
     <%= f.text_field :title, placeholder: "Protocol Name" %>
     <%= f.text_area :content, placeholder: "Content..." %>
+
+    <%= f.check_box(:public_contact) %>
+    <%= f.label(:public_contact, "I wish this protocol to be publicly availible") %>
   </div>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>                                                                                                                                                                             

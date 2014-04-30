@@ -18,6 +18,8 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/protocols/public', to: 'static_pages#protocols_view', via: 'get'
+  match '/protocols/public/:id', to: 'static_pages#protocols_show', via: 'get'
   match '/orders',  to: 'orders#view',          via: 'get'
   match '/protocols',  to: 'protocols#view',       via: 'get'
   match '/protocols/:id',  to: 'protocols#show',       via: 'get'
