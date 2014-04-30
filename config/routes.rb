@@ -8,7 +8,7 @@ SampleApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
-  resources :orders, only: [:create, :destroy]                                                                                                                          
+  resources :orders, only: [:create, :destroy]
   resources :protocols, only: [:create, :destroy]                                                                                                                          
 
   root 'static_pages#home'
@@ -20,6 +20,7 @@ SampleApp::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/orders',  to: 'orders#view',          via: 'get'
   match '/protocols',  to: 'protocols#view',       via: 'get'
+  match '/protocols/:id',  to: 'protocols#show',       via: 'get'
 
   get 'schedule/:equipment' => 'schedule#view', as: :equipment_schedule
   post 'schedule/:equipment/book' => 'schedule#create'

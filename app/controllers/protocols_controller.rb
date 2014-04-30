@@ -8,7 +8,7 @@ class ProtocolsController < ApplicationController
 
   def create
     @protocol = current_user.protocols.build(order_params)
-    current_user.microposts.create( :content => "#{current_user.name} posted the protocol: #{order_params[:content]}")                                    
+    current_user.microposts.create( :content => "#{current_user.name} posted the protocol: #{order_params[:title]}")                                    
     if @protocol.save
       flash[:success] = "Order created!"
       redirect_to action: 'view'
@@ -26,6 +26,11 @@ class ProtocolsController < ApplicationController
   def view
     @protocol = current_user.protocols.build
     @protocol_feed_items = current_user.protocol_feed.paginate(page: params[:page])
+  end
+
+
+  def show
+    @protocols =  Protocol.find(params[:id])
   end
 
   private
