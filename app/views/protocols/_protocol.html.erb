@@ -1,0 +1,13 @@
+<li>                                                                          
+<span class="content"><%= link_to protocol.title, protocol %></span>               
+<br>
+<span class="content"><%= simple_format(truncate(protocol.content), :length => 50, :separator => ' ' ) %></span>
+<span class="timestamp">
+  Posted <%= time_ago_in_words(protocol.created_at) %> ago.
+</span>
+<% if current_user?(protocol.user) %>
+  <%= link_to "delete", protocol, method: :delete,
+    data: { confirm: "You sure?" },
+    title: protocol.title %>
+  <% end %>
+  </li>

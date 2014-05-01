@@ -1,3 +1,6 @@
+<h1>
+  Protocols
+</h1>
 <div class="users">
   <% @public_protocols.each do |protocol| %>
     <div class="row">
@@ -5,9 +8,9 @@
         <%= gravatar_for protocol.user %>
       </div>
       <div class="span3">
-        <%= protocol.title %>
+        <%= link_to protocol.title, "/protocols/public/#{protocol.id}"  %>
         <br>
-        by <%= protocol.user.name %>
+        by <%= link_to protocol.user.name, contact_path %>
       </div>
       <div class="span8">                                                                                     
         <%= simple_format(truncate(protocol.content), :length => 250, :separator => ' ' ) %>

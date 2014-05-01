@@ -1,6 +1,12 @@
-<h1>
-  <%= @protocols.title %> by <%= User.find_by( id: @protocols.user_id).name %>                                                                                                 
-</h1>
-<p>
-<%= simple_format(@protocols.content) %>
-</p>
+<% if @protocols.public_contact? %>
+  <h1>
+    <%= @protocols.title %> by <%= User.find_by( id: @protocols.user_id).name %>                                                                                                 
+  </h1>
+  <p>
+  <%= simple_format(@protocols.content) %>
+  </p>
+<% else %>
+  <script type="text/javascript">
+    window.location.href="/signin"  // put your correct path in a string here
+  </script>
+<% end %>
