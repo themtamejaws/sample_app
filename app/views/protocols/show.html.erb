@@ -1,6 +1,8 @@
 <h1> 
   <%= @protocols.title %> by <%= link_to User.find_by( id: @protocols.user_id).name, User.find_by( id: @protocols.user_id) %>
 </h1>
+<br>
+<%= render 'relevance_form' if signed_in? %> 
 <p>
 <%= simple_format(@protocols.content) %>
 </p>

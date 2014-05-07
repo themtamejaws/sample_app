@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430203247) do
+ActiveRecord::Schema.define(version: 20140501123200) do
 
   create_table "bookings", force: true do |t|
     t.date    "day",       null: false
@@ -78,6 +78,17 @@ ActiveRecord::Schema.define(version: 20140430203247) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+
+  create_table "relevant_protocols", force: true do |t|
+    t.integer  "for_user_id"
+    t.integer  "to_protocol_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relevant_protocols", ["for_user_id", "to_protocol_id"], name: "index_relevant_protocols_on_for_user_id_and_to_protocol_id", unique: true
+  add_index "relevant_protocols", ["for_user_id"], name: "index_relevant_protocols_on_for_user_id"
+  add_index "relevant_protocols", ["to_protocol_id"], name: "index_relevant_protocols_on_to_protocol_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

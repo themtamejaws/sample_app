@@ -1,6 +1,6 @@
 <li id="<%= protocol_feed_item.id %>">
 <%= link_to gravatar_for(protocol_feed_item.user), protocol_feed_item.user %>
-<span class="content"><%= link_to protocol_feed_item.title, "protocols/#{protocol_feed_item.id}" %></span>                                                                                                                        
+<span class="content"><%= link_to protocol_feed_item.title, "#{root_url}protocols/#{protocol_feed_item.id}" %></span>                                                                                                                        
 <span class="content"><%= simple_format(truncate(protocol_feed_item.content), :length => 50, :separator => ' ' ) %></span>                                                                                                                        
 <span class="timestamp">
   Posted <%= time_ago_in_words(protocol_feed_item.created_at) %> ago.

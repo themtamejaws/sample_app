@@ -1,0 +1,7 @@
+<% unless current_user?(@user) %>
+  <div id="relevance_form">
+    <% unless current_user.relevant?(@protocols) %>
+      <%= render 'mark_relevant' %>
+    <% end %>
+  </div>
+<% end %>

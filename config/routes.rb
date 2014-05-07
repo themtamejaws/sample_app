@@ -3,11 +3,13 @@ SampleApp::Application.routes.draw do
   resources :users do
     member do
       get :following, :followers
+      get :to_protocol_id, :for_user_id
     end
   end
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :relevant_protocols, only: [:create, :destroy]
   resources :orders, only: [:create, :destroy]
   resources :protocols, only: [:create, :destroy]                                                                                                                          
 
@@ -18,11 +20,14 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/papers',  to: 'static_pages#papers',  via: 'get'
   match '/protocols/public', to: 'static_pages#protocols_view', via: 'get'
   match '/protocols/public/:id', to: 'static_pages#protocols_show', via: 'get'
   match '/orders',  to: 'orders#view',          via: 'get'
   match '/protocols',  to: 'protocols#view',       via: 'get'
   match '/protocols/:id',  to: 'protocols#show',       via: 'get'
+  match '/relevant_protocols/:id',  to: 'protocols#view',       via: 'post'
+  match '/relevant_protocols',  to: 'static_pages#home',       via: 'delete'
 
   get 'schedule/:equipment' => 'schedule#view', as: :equipment_schedule
   post 'schedule/:equipment/book' => 'schedule#create'

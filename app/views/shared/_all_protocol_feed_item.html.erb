@@ -1,0 +1,13 @@
+<li id="<%= all_protocol_feed_item.id %>">
+<%= link_to gravatar_for(all_protocol_feed_item.user), all_protocol_feed_item.user %>
+<span class="content"><%= link_to all_protocol_feed_item.title, "#{root_url}protocols/#{all_protocol_feed_item.id}" %></span>                                                                                                                                                         
+<span class="content"><%= simple_format(truncate(all_protocol_feed_item.content), :length => 50, :separator => ' ' ) %></span>                                                                                          
+<span class="timestamp">
+  Posted <%= time_ago_in_words(all_protocol_feed_item.created_at) %> ago.
+</span>
+<% if current_user?(all_protocol_feed_item.user) || current_user.admin? %>
+  <%= link_to "delete", all_protocol_feed_item, method: :delete,
+    data: { confirm: "You sure?" },
+    title: all_protocol_feed_item.title %>
+  <% end %>
+  </li>

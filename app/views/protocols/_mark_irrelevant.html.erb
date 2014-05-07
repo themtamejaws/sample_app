@@ -1,0 +1,5 @@
+<%= form_for(current_user.relevant_protocols.find_by(to_protocol_id: @protocols.id),
+             html: { method: :delete },
+            remote: true) do |f| %>
+                              <%= f.submit "Unfavourite", class: "btn btn-large" %>
+                            <% end %>

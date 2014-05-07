@@ -31,12 +31,14 @@
     <% end %>
     <% if @user.protocols.any? %>
           <%= render 'follow_form' if signed_in? %>
-      <h3>Protocols (<%= @user.protocols.count %>)</h3>
+      <h3>My Protocols (<%= @user.protocols.count %>)</h3>
       <ol class="orders">
         <%= render @protocols %>
       </ol>
       <%= will_paginate @protocols %>
 
     <% end %>
+        <h3>Favourite Protocols</h3>
+        <%= render 'shared/protocol_feed' %>
   </div>
 </div>

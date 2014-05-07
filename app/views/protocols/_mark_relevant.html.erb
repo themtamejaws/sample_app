@@ -1,0 +1,5 @@
+<%= form_for(current_user.relevant_protocols.build(to_protocol_id: @protocols.id),
+             remote: true) do |f| %>
+               <div><%= f.hidden_field :to_protocol_id %></div>
+               <%= f.submit "Favourite", class: "btn btn-large btn-primary" %>
+             <% end %>

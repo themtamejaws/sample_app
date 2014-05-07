@@ -3,7 +3,12 @@ class User < ActiveRecord::Base
   has_many :bookings, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_many :protocols, dependent: :destroy
+
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :relevant_protocols, foreign_key: "for_user_id", dependent: :destroy
+
+  has_many :followed_protocols, through: :relevant_protocols, source: :relevant
+
   has_many :followed_users, through: :relationships, source: :followed
   has_many :reverse_relationships, foreign_key: "followed_id",
     class_name:  "Relationship",
@@ -37,7 +42,11 @@ class User < ActiveRecord::Base
   end
 
   def protocol_feed
-    Protocol.from_users_followed_by(self)
+    Protocol.from_relevant_protocols(self)
+  end
+
+  def all_protocol_feed
+    Protocol.all
   end
 
   def following?(other_user)
@@ -50,6 +59,18 @@ class User < ActiveRecord::Base
 
   def unfollow!(other_user)
     relationships.find_by(followed_id: other_user.id).destroy
+  end
+
+  def relevant?(protocol)
+    relevant_protocols.find_by(to_protocol_id: protocol.id)
+  end
+
+  def make_relevant!(protocol)
+    relevant_protocols.create!(to_protocol_id: protocol.id)
+  end
+
+  def make_irrelevant!(protocol)
+    relevant_protocols.find_by(to_protocol_id: protocol.id).destroy
   end
 
   private

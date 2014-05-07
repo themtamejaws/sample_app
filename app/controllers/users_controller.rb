@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.paginate(page: params[:page])
     @orders =  @user.orders.paginate(page: params[:page])
     @protocols =  @user.protocols.paginate(page: params[:page])
+    @protocol_feed_items = current_user.protocol_feed.paginate(page: params[:page])
   end
 
   def new
